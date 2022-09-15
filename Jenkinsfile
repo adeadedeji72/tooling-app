@@ -12,6 +12,7 @@ pipeline {
         stage("test") {
             steps { 
                 echo 'this is the test stage'
+                echo 'print this'
 
             }
         }
