@@ -21,6 +21,7 @@ pipeline {
             steps { 
                 echo 'this is the deployment stage'
                 echo 'deploy this again'
+                echo 'another test'
 
             }
         }
