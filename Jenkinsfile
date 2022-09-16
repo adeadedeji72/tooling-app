@@ -5,6 +5,7 @@ pipeline {
         stage("build") {
             steps { 
                 echo 'this is the build stage'
+                echo 'building safe havens'
 
             }
         }
