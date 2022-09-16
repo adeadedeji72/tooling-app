@@ -14,6 +14,7 @@ pipeline {
             steps { 
                 echo 'this is the test stage'
                 echo 'print this'
+                echo 'test, again 4:43'
 
             }
         }
