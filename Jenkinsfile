@@ -19,7 +19,7 @@ pipeline {
             steps { 
                 echo 'this is the deployment stage'
                 echo 'added to dev branch'
-                echo 'hello'
+                echo 'hello!'
 
             }
         }
