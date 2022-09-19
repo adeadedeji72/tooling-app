@@ -7,6 +7,7 @@ pipeline {
                 echo 'this is the build stage'
                 echo 'building safe havens'
                 echo 'lets build'
+                echo 'here we are'
 
             }
         }
