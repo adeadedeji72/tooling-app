@@ -18,6 +18,7 @@ pipeline {
         stage("deploy") {
             steps { 
                 echo 'this is the deployment stage'
+                echo 'added to dev branch'
 
             }
         }
