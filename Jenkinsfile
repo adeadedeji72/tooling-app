@@ -6,7 +6,7 @@ pipeline{
 
         stage("Build Docker Image") {
             steps {
-                sh 'docker build -t bayo72/bayo_devops:todoapp-0.1 .'
+                sh 'docker build -t bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.1 .'
             }
         }
         stage("Login to Dockerhub") {
@@ -19,9 +19,10 @@ pipeline{
         }
         stage("Push Image to Dockerhub") {
             steps {
-                sh 'docker push bayo72/bayo_devops:todoapp-0.1'
+            steps {
+                sh 'docker push bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.1'
             }
         }
     }
-    
+
 }
