@@ -1,33 +1,11 @@
-pipeline {
+pipeline{
     agent any
 
-    stages{
-        stage("build") {
-            steps { 
-                echo 'this is the build stage'
-                echo 'building safe havens'
-                echo 'lets build'
-                echo 'here we are'
-                echo 'build again'
 
-            }
-        }
-
-        stage("test") {
-            steps { 
-                echo 'this is the test stage'
-                echo 'print this'
-                echo 'test, again 4:43'
-
-            }
-        }
-        stage("deploy") {
-            steps { 
-                echo 'this is the deployment stage'
-                echo 'deploy this again'
-                echo 'another test'
-                echo 'yet another test'
-
+    stages {
+        stage('Build') {
+            step{
+                sh 'docker build -t adeadedeji72/php_todo:trelease-0.1 .'
             }
         }
     }
