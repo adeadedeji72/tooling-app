@@ -1,0 +1,1 @@
+CREATE USER 'tools'@'%' IDENTIFIED BY 'password'; GRANT ALL PRIVILEGES ON * . * TO 'tools'@'%';
