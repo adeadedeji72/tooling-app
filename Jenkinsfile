@@ -10,7 +10,7 @@ pipeline {
         }
         stage("Login to Dockerhub") {
             steps {
-                withCredentials([string(credentialsId: 'hub_secret', variable: 'sec_docker')]) {
+                withCredentials([string(credentialsId: 'dockerhubPWD', variable: 'sec_docker1')]) {
                 sh 'docker login -u bayo72 -p ${dockerhub_secret}' }
             }
 
