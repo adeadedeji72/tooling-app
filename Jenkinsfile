@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.2 .'
+                sh 'docker build -t bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.5 .'
             }
         }
         stage('Login to Dockerhub') {
@@ -30,15 +30,14 @@ pipeline {
         }
         stage('Push Image to Dockerhub') {
             steps {
-                sh 'docker push bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.2'
+                sh 'docker push bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.5'
             }
         }
-        post {
-            always {
-                script {
-                    step([$class: 'WsCleanup'])
-                }
+    }
+    post {
+        always {
+            echo 'Completed!'
+            deleteDir()
             }
-        }
     }
 }
