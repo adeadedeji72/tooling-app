@@ -33,5 +33,11 @@ pipeline {
                 sh 'docker push bayo72/bayo_devops:'+env.BRANCH_NAME+'-0.2'
             }
         }
+        post ('Clean Up') {
+            always {
+                echo 'Completed'
+                deleteDir()
+            }
+        }
     }
 }
