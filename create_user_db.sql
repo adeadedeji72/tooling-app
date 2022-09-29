@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS tododb;
+CREATE USER 'todo'@'%' IDENTIFIED BY 'password'; GRANT ALL PRIVILEGES ON * . * TO 'todo'@'%';
